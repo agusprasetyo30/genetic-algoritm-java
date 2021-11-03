@@ -4,11 +4,8 @@ import java.util.Random;
 import java.lang.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Scanner;
 
-public final class GenetikAlogarithm {
+public final class GeneticAlgorithm {
 
     Random rn = new Random();
     int[] target;
@@ -23,7 +20,7 @@ public final class GenetikAlogarithm {
     public int generationSize = 0;
     double[][] newGen;
 
-    public GenetikAlogarithm(int[] target, int individuSize, int generationSize) {
+    public GeneticAlgorithm(int[] target, int individuSize, int generationSize) {
         this.target = target;
         this.individuSize = individuSize;
         this.generationSize = generationSize;

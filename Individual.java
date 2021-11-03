@@ -100,11 +100,11 @@ public class Individual {
     }
 
     public void convertString() {
-        char[] huruf = {' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        char[] huruf = {' ','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         
         printGen();
         System.out.print("       -----       ");
-        for (int i = 0; i < this.gen.length; i++) {
+        for (int i = 0; i < target.length; i++) {
             System.out.print(huruf[gen[i]] + " ");
         }
         

@@ -12,19 +12,33 @@ public class Main {
         input();
 
         int i = 0;
-        int idividualSize = target.length;
+        int individualSize = target.length;
 
-        GenetikAlogarithm demo = new GenetikAlogarithm(target, (idividualSize % 2 == 0 ? idividualSize : idividualSize + 1), generation);
+        /**
+         * Menambahkan data-data dalam konstruktor seperti
+         * target : Kata/target yang akan dicari menggunakan GA
+         * individualSize : Jumlah dari individu/target yang akan dicari
+         *  ket : Pada implementasinya bisa di jalankan jika data bernilai GENAP
+         *        Jika bernilai GANJIL maka di + 1
+         * generation : Nilai awal data generation
+         */
+        GeneticAlgorithm genetic = new GeneticAlgorithm(target, 
+                (individualSize % 2 == 0 ? individualSize : individualSize + 1),
+                generation);
 
-        while (!kata.equals(demo.convertDataToString())) {
-            demo.test();
+        // Melakukan perulangan sampai kata yang diinput sesuai dengan
+        while (!kata.equals(genetic.convertDataToString())) {
+            genetic.test();
             System.out.print(++i + ") => ");
-            demo.convertToString();
+            genetic.convertToString();
         }
 
         System.out.println("last generation = " + i);
     }
 
+    /**
+     * fungsi untuk menginputkan data yang diinput ke daam array
+     */
     public static void input() {
         Scanner input = new Scanner(System.in);
         System.out.print("Masukan kata : ");
